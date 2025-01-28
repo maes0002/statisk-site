@@ -112,6 +112,30 @@ nav.active .menu a {
   grid-template-columns: 1fr;
 }
 
+.cta_index {
+  margin: auto;
+  padding: 20px 10px 20px 10px;
+  border-radius: 10px;
+}
+
+.cta_index a {
+  display: grid;
+  background-color: var(--secondary);
+  color: var(--contrast);
+
+  text-align: center;
+  font-size: 20px;
+  justify-content: center;
+  padding: 2rem 10rem 2rem 10rem;
+}
+
+.cta_index :hover {
+  color: var(--secondary);
+  background-color: var(--contrast);
+  border: 3px solid var(--secondary);
+  transition: 0.5s ease;
+}
+
 .cta {
   margin: auto;
   padding: 20px 10px 20px 10px;
@@ -122,8 +146,8 @@ nav.active .menu a {
   display: grid;
   background-color: var(--secondary);
   color: var(--contrast);
-  width: 20rem;
-  height: 3rem;
+  width: auto;
+  height: auto;
   text-align: center;
   font-size: 20px;
   justify-content: center;
@@ -147,6 +171,81 @@ nav.active .menu a {
   padding: 15px;
 }
 
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* --------STØRRELSESMENU-------------*/
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--secondary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--secondary);
+}
+/* ------------------------------*/
+
+.information {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.add_to_basket {
+  margin: 15px;
+}
+
+.sold_out {
+  background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+  display: none;
+  text-align: center;
+  margin: 10px auto;
+}
 /* -----------------------------------------------------------------MEDIA----------------*/
 
 @media (min-width: 800px) {
@@ -167,6 +266,18 @@ nav.active .menu a {
     gap: 20px;
   }
 
-  .box {
+  .product_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .add_to_basket {
+    margin: 15px;
   }
 }

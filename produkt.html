@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forside</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
+  </head>
+  <body>
+    <!---------------------------------------------------------------------------------------HEADER------->
+    <header>
+      <!--HEADER - logo og burgermenu-->
+      <div class="logo">
+        <a href="index.html">FASHIONRUS</a>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="produktliste.html">Produktliste</a></li>
+          <li><a href="produkt.html">Produkt</a></li>
+        </ul>
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+    <!---------------------------------------------------------------------------------------MAIN------->
+    <main>
+      <div class="product_container">
+        <div>
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/1541.webp" alt="Snesko" />
+        </div>
+
+        <div class="information_container">
+          <div class="sold_out">
+            <h1>Sold out</h1>
+          </div>
+          <div>
+            <h1>ProSnow</h1>
+            <h2>499 DKK</h2>
+          </div>
+
+          <div class="information">
+            <div>
+              <h2>Product information</h2>
+              <p>Snowshoe noGlide pro 1</p>
+              <p>Limegreen</p>
+              <p>123456789000</p>
+            </div>
+
+            <div class="add_to_basket">
+              <!--https://www.w3schools.com/howto/howto_css_dropdown.asp-->
+              <div class="dropdown">
+                <button class="dropbtn">Choose your size</button>
+                <div class="dropdown-content">
+                  <a href="#">40</a>
+                  <a href="#">41</a>
+                  <a href="#">42</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta">
+            <a class="cta" href="produktliste.html">Add to basket</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="menu.js"></script>
+  </body>
+</html>
