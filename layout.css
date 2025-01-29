@@ -113,7 +113,6 @@ nav.active .menu a {
 }
 
 .cta_index {
-  margin: auto;
   padding: 20px 10px 20px 10px;
   border-radius: 10px;
 }
@@ -138,7 +137,7 @@ nav.active .menu a {
 
 .cta {
   margin: auto;
-  padding: 20px 10px 20px 10px;
+  padding: 20px 0px 20px 0px;
   border-radius: 10px;
 }
 
@@ -174,78 +173,88 @@ nav.active .menu a {
 .product_container {
   display: grid;
   grid-template-columns: 1fr;
+  margin: auto;
+  gap: 15px;
 }
 
-/* --------STØRRELSESMENU-------------*/
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: var(--secondary);
-  color: var(--primary);
-  padding: 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--primary);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: var(--secondary);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: var(--secondary);
-}
 /* ------------------------------*/
 
-.information {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .add_to_basket {
-  margin: 15px;
+  display: grid;
+  justify-content: right;
 }
+/* -----------------------------------------------------------------SOLD OUT----------------*/
 
 .sold_out {
   background-color: red;
   padding: 5px;
   border-radius: 10px;
-  display: none;
+  display: none; /*display none for at den ikke vises (endnu)*/
   text-align: center;
   margin: 10px auto;
 }
+/* -----------------------------------------------------------------DISCOUNT----------------*/
+
+/* -----------------------------------------------------------------PRODUKT---------------*/
+
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.information_container {
+  display: grid;
+  margin: auto;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product_container img {
+  object-fit: cover;
+  align-self: stretch;
+}
+
+.information {
+  display: flex;
+  margin: auto;
+}
+
+.size_add {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin: auto;
+}
+
+.size-selector {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 300px;
+  justify-content: center;
+  margin: auto;
+}
+
+.size-selector button {
+  background-color: #ddd;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-selector button:hover {
+  background-color: #ccc;
+}
+
+.size-selector button.active {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
 /* -----------------------------------------------------------------MEDIA----------------*/
 
 @media (min-width: 800px) {
@@ -266,18 +275,21 @@ nav.active .menu a {
     gap: 20px;
   }
 
+  /* -----------------------------------------------------------------PRODUKT---------------*/
+
   .product_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    justify-content: center;
   }
 
-  .information {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .information h1 {
+    justify-self: right;
+    padding-left: 10px;
   }
 
-  .add_to_basket {
-    margin: 15px;
+  .information h2 {
+    justify-self: left;
+    padding-left: 5px;
   }
 }

@@ -1,3 +1,11 @@
+/*************** Reset *********************/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+}
+
 /* ----------------------------------------------------- VARIABLE --------------*/
 :root {
   /* Primære farve til hele sitet */
@@ -30,7 +38,7 @@ h1 {
   font-family: var(--main_font);
   color: var(--secondary);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h2 {
