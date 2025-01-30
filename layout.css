@@ -113,15 +113,14 @@ nav.active .menu a {
 }
 
 .cta_index {
-  padding: 20px 10px 20px 10px;
   border-radius: 10px;
+  margin: auto;
 }
 
 .cta_index a {
   display: grid;
   background-color: var(--secondary);
   color: var(--contrast);
-
   text-align: center;
   font-size: 20px;
   justify-content: center;
@@ -161,6 +160,7 @@ nav.active .menu a {
 
 .category_list_container {
   grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .box {
@@ -193,6 +193,15 @@ nav.active .menu a {
   text-align: center;
   margin: 10px auto;
 }
+
+.discount {
+  background-color: rgb(245, 206, 65);
+  padding: 5px;
+  border-radius: 10px;
+  display: none; /*display none for at den ikke vises (endnu)*/
+  text-align: center;
+  margin: 10px auto;
+}
 /* -----------------------------------------------------------------DISCOUNT----------------*/
 
 /* -----------------------------------------------------------------PRODUKT---------------*/
@@ -206,7 +215,7 @@ nav.active .menu a {
   display: grid;
   margin: auto;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 30px;
 }
 
 .product_container img {
@@ -215,44 +224,20 @@ nav.active .menu a {
 }
 
 .information {
-  display: flex;
-  margin: auto;
-}
-
-.size_add {
   display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
   margin: auto;
 }
 
-.size-selector {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  max-width: 300px;
-  justify-content: center;
-  margin: auto;
+.product_details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid var(--secondary);
 }
 
-.size-selector button {
-  background-color: #ddd;
-  border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.size-selector button:hover {
-  background-color: #ccc;
-}
-
-.size-selector button.active {
-  background-color: var(--secondary);
-  color: var(--primary);
-  border-color: var(--primary);
+.product_details p {
+  padding: 5px;
 }
 
 /* -----------------------------------------------------------------MEDIA----------------*/
@@ -281,15 +266,6 @@ nav.active .menu a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-  }
-
-  .information h1 {
-    justify-self: right;
-    padding-left: 10px;
-  }
-
-  .information h2 {
-    justify-self: left;
-    padding-left: 5px;
+    gap: 20px;
   }
 }
